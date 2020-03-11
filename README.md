@@ -7,11 +7,10 @@ Example:
 FluentActivator
 	.SetType(formType)
 	.SetArgs(new object[] { global, id })
-	.OnBeforeConstructor((instance) =>
-	{
-	   baseForm = instance as BaseForm;
-	
-	   if (baseForm != null)
+	.OnBeforeConstructor((instance) => {
+		baseForm = instance as BaseForm;
+		
+		if (baseForm != null)
 			baseForm.FormId = formRow.FormId;
 	})
 	.CreateInstance<Form>(ref form);
