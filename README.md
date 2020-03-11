@@ -11,7 +11,7 @@ FluentActivator
 		BaseForm baseForm = instance as BaseForm;
 		
 		if (baseForm != null)
-			baseForm.FormId = formRow.FormId;
+		    baseForm.FormId = formRow.FormId;
 	})
 	.CreateInstance<Form>(ref form);
 ```
